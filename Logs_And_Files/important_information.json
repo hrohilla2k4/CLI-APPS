@@ -19,5 +19,12 @@
     "userDob": "17/07/2004",
     "userPassword": "hart",
     "confirmPassword": "hart"
+  },
+  {
+    "userName": "harsh56",
+    "userEmail": "hrohilla2k4@gmail.com",
+    "userDob": "17/07/2004",
+    "userPassword": "pass",
+    "confirmPassword": "pass"
   }
 ]

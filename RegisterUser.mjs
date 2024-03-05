@@ -3,6 +3,8 @@ import jFile from "jsonfile"
 import readInfoFile from "./ReadFileModule.mjs";
 
 let collectInfo;
+
+// Read old data present (if any)
 const fileOldData = readInfoFile();
 
 function checkPassword(password, confirmPassword){
@@ -28,6 +30,7 @@ function checkUniqueData(data,username){
 }
 
 const RegisterUser = () => {
+    
         collectInfo = {
         userName : question("What is your name? "),
         userEmail: question("Enter your email: "),
