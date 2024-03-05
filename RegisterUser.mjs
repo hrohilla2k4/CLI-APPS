@@ -1,7 +1,16 @@
 import { question } from "readline-sync";
 import jFile from "jsonfile"
 
-const fileName = 'important_information.txt'
+
+function checkPassword(password, confirmPassword){
+    if(password === confirmPassword){
+        // Do nothing
+    }
+    else{
+        console.log("Password do not match, try again")
+        process.exit(0) 
+    }
+}
 
 const RegisterUser = () => {
     const collectInfo = {
@@ -12,47 +21,35 @@ const RegisterUser = () => {
         confirmPassword : question("Confirm the password: ")
     }
     
-    if(collectInfo.userPassword !== collectInfo.confirmPassword){
-        console.log("Password do not match, try again")
-        exit();
-    }
-    
-    const userDetails = {
-        userName: collectInfo.userName,
-        userEmail: collectInfo.userEmail,
-        userDob: collectInfo.userDob,
-        userPassword: collectInfo.userPassword,
-        confirmPassword: collectInfo.confirmPassword
-    }
-    
-    // jFile.readFile(`./Logs_And_Files/important_information.json`, (err,data)=>{
-    //     if(!data){
-    //         jFile.writeFile(`./Logs_And_Files/important_information.json`,[], {spaces: 2}, (err)=>{
-    //             if(err){
-    //                 console.log(err)
-    //             }    
-    //             else{
-    //                 console.log("Empty file written")
-    //             }
-    //         })
-    //     }
-    //     else {
-    //         if (!Array.isArray(data)){
-    //             data = [
-    //           
-    //         ];
-    //         }
-    //         data.push(userDetails)       
-    //     }
+    checkPassword(collectInfo.userPassword, collectInfo.confirmPassword);
 
-        jFile.writeFile(`./Logs_And_Files/important_information.json`,userDetails, {spaces:2}, (err) => {
-            if(err){
-                console.error(err)
-            }
-            else{
-                console.log("Data appended to file successfully");
-            }
-        })
+     jFile.readFile(`./Logs_And_Files/important_information.json`, (err,data)=>{
+        if(!data){
+            jFile.writeFile(`./Logs_And_Files/important_information.json`,[collectInfo],{spaces: 2}, (err)=>{
+                if(err){
+                    console.log(err)
+                }    
+                else{
+                    console.log("Empty file written")
+                }
+            })
+        }
+        else {
+            if (Array.isArray(data)){
+                data.push(collectInfo)
+                jFile.writeFile(`./Logs_And_Files/important_information.json`,data,{spaces: 2}, (err)=> {
+                    if(err){
+                        console.error(err)
+                    }
+                    else{
+                        console.log(data)
+                    }
+                })
+            }    
+        }
+         } 
+             )
+
 }
 
 export default RegisterUser;

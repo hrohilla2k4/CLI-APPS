@@ -6,7 +6,6 @@ let gotData;
 const getDataFromFile = async () => {
     try {
         gotData = await readInfoFile();
-        next();
     } catch (error) {
         console.error(error)
     }

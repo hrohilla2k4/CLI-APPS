@@ -8,7 +8,7 @@ const readInfoFile = () => {
             }
             else{
                 res(data)
-                console.log(data, "Print from - readlifemodule")
+                console.log(data, "Print from - readfilemodule")
             }
         })
     })
