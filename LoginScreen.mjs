@@ -1,7 +1,8 @@
 import { question } from "readline-sync";
 import RegisterUser from "./RegisterUser.mjs";
-import menu from "./menuPrinter.mjs";
 import Login from "./LoginUser.mjs";
+import menu from "./menuPrinter.mjs";
+
 
 menu("login screen")
 

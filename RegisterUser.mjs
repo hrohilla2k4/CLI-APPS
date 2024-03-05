@@ -1,6 +1,9 @@
 import { question } from "readline-sync";
 import jFile from "jsonfile"
+import readInfoFile from "./ReadFileModule.mjs";
 
+let collectInfo;
+const fileOldData = readInfoFile();
 
 function checkPassword(password, confirmPassword){
     if(password === confirmPassword){
@@ -12,8 +15,20 @@ function checkPassword(password, confirmPassword){
     }
 }
 
+function checkUniqueData(data,username){
+    for(const{userName} of data){
+        if(userName == username){
+            console.log("Username not available, add numbers like - 2k4 or other")
+            collectInfo.userName = question("Enter another username");
+        }
+        else{
+            // Do nothing. 
+        }
+    }
+}
+
 const RegisterUser = () => {
-    const collectInfo = {
+        collectInfo = {
         userName : question("What is your name? "),
         userEmail: question("Enter your email: "),
         userDob : question("What is your D.O.B: \u001b[31mEnter in (dd/mm/yyyy): \x1b[0m"), 
@@ -24,6 +39,7 @@ const RegisterUser = () => {
     checkPassword(collectInfo.userPassword, collectInfo.confirmPassword);
 
      jFile.readFile(`./Logs_And_Files/important_information.json`, (err,data)=>{
+        checkUniqueData(fileOldData, collectInfo.userName);
         if(!data){
             jFile.writeFile(`./Logs_And_Files/important_information.json`,[collectInfo],{spaces: 2}, (err)=>{
                 if(err){
@@ -37,6 +53,7 @@ const RegisterUser = () => {
         else {
             if (Array.isArray(data)){
                 data.push(collectInfo)
+                checkUniqueData(fileOldData, collectInfo.userName)
                 jFile.writeFile(`./Logs_And_Files/important_information.json`,data,{spaces: 2}, (err)=> {
                     if(err){
                         console.error(err)
