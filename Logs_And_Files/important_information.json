@@ -3,28 +3,21 @@
     "userName": "harsh",
     "userEmail": "hrohilla2k4@gmail.com",
     "userDob": "17/07/2004",
-    "userPassword": "harshr",
-    "confirmPassword": "harshr"
+    "userPassword": "pass@800",
+    "confirmPassword": "pass@800"
   },
   {
     "userName": "harshita",
     "userEmail": "harshita@gmail.com",
-    "userDob": "20/05/2005",
+    "userDob": "17/08/2005",
     "userPassword": "harshita",
     "confirmPassword": "harshita"
   },
   {
-    "userName": "harsh55",
-    "userEmail": "hrohilla2k4@gmail.com",
-    "userDob": "17/07/2004",
-    "userPassword": "hart",
-    "confirmPassword": "hart"
-  },
-  {
-    "userName": "harsh56",
-    "userEmail": "hrohilla2k4@gmail.com",
-    "userDob": "17/07/2004",
-    "userPassword": "pass",
-    "confirmPassword": "pass"
+    "userName": "harsh2k4",
+    "userEmail": "hrohilla2k4@5gmail.com",
+    "userDob": "17/06/2007",
+    "userPassword": "har",
+    "confirmPassword": "har"
   }
 ]

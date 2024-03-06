@@ -1,7 +1,7 @@
 import jFile from "jsonfile"
 
-const readInfoFile = () => {
-    const data = jFile.readFileSync(`./Logs_And_Files/important_information.json`)
+const readInfoFile = (filePath) => {
+    const data = jFile.readFileSync(filePath)
     return data;
 }
 

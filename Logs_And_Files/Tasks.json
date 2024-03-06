@@ -1,7 +1,20 @@
 [
   {
     "taskTitle": "Study",
-    "taskDesc": "Read all the loops in javascript",
-    "taskStatus": "C"
+    "taskDesc": "Study whole night",
+    "taskStatus": "P",
+    "taskId": "3"
+  },
+  {
+    "taskTitle": "Water plants",
+    "taskDesc": "Water all the plants in the lawn and at the home",
+    "taskStatus": "P",
+    "taskId": "2"
+  },
+  {
+    "taskTitle": "Coding",
+    "taskDesc": "Work all day and code the project",
+    "taskStatus": "P",
+    "taskId": "1"
   }
 ]

@@ -25,7 +25,7 @@ function checkCredentials(data) {
 
 const Login = () => {
     getUserData();
-    gotData = readInfoFile();
+    gotData = readInfoFile(`./Logs_And_Files/important_information.json`);
     checkCredentials(gotData);
 
 }

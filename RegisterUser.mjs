@@ -5,7 +5,7 @@ import readInfoFile from "./ReadFileModule.mjs";
 let collectInfo;
 
 // Read old data present (if any)
-const fileOldData = readInfoFile();
+const fileOldData = readInfoFile(`./Logs_And_Files/important_information.json`);
 
 function checkPassword(password, confirmPassword){
     if(password === confirmPassword){
@@ -71,6 +71,8 @@ const RegisterUser = () => {
              )
 
 }
+
+
 
 export default RegisterUser;
 
