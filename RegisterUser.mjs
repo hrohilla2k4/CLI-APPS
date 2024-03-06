@@ -1,6 +1,7 @@
 import { question } from "readline-sync";
 import jFile from "jsonfile"
 import readInfoFile from "./ReadFileModule.mjs";
+import TaskManager from "./TaskManager.mjs";
 
 let collectInfo;
 

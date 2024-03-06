@@ -27,6 +27,5 @@ switch(userChoice){
 }   
 }
 
-TaskManager()
 
 export default TaskManager
