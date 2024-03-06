@@ -2,17 +2,17 @@
   {
     "taskTitle": "Study",
     "taskDesc": "Study whole night",
-    "taskStatus": "P",
+    "taskStatus": "Study for only 4 hours",
     "taskId": "3"
   },
   {
-    "taskTitle": "Water plants",
+    "taskTitle": "Help me",
     "taskDesc": "Water all the plants in the lawn and at the home",
     "taskStatus": "P",
     "taskId": "2"
   },
   {
-    "taskTitle": "Coding",
+    "taskTitle": "Codig",
     "taskDesc": "Work all day and code the project",
     "taskStatus": "P",
     "taskId": "1"
