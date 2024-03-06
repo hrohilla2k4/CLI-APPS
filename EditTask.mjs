@@ -5,12 +5,15 @@ import jFile from 'jsonfile';
 const filePath = 'Logs_And_Files/Tasks.json';
 const gotData = readInfoFile(filePath);
 
-const getEditData = {
-    taskId: question("Enter Id Of The Task To Edit: "),
-    whatToEdit: question("\u001b[32m'TT' For Task Title 'TD' For Task Description 'TS' For Task Status 'TI' For Task Id  \x1b[0m")
-};
+
 
 function EditTask() {
+
+    const getEditData = {
+        taskId: question("Enter Id Of The Task To Edit: "),
+        whatToEdit: question("\u001b[32m'TT' For Task Title 'TD' For Task Description 'TS' For Task Status 'TI' For Task Id  \x1b[0m")
+    };
+
     for (let task of gotData) {
         if (getEditData.taskId === task.taskId) {
             switch (getEditData.whatToEdit) {

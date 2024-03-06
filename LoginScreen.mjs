@@ -3,9 +3,6 @@ import RegisterUser from "./RegisterUser.mjs";
 import Login from "./LoginUser.mjs";
 import menu from "./menuPrinter.mjs";
 
-const start = process.hrtime()
-
-
 function loginProcess () {
     menu("login screen")
 
