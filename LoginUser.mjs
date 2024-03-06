@@ -19,7 +19,12 @@ function checkCredentials(data) {
         }
         else if((userName === collectInfo.userName) && (userPassword !== collectInfo.userPassword)){
             console.log(`Wrong password for: ${userName}`)
-        }   
+            process.exit(0)
+        } 
+        else{
+            console.log("Wrong credentials!!")
+            process.exit(0)
+        }  
     }
 }
 

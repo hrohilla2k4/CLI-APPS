@@ -61,9 +61,11 @@ const RegisterUser = () => {
                 jFile.writeFile(`./Logs_And_Files/important_information.json`,data,{spaces: 2}, (err)=> {
                     if(err){
                         console.error(err)
+                        process.exit(0)
                     }
                     else{
-                        console.log(data)
+                        console.log("User registered")
+                        
                     }
                 })
             }    
