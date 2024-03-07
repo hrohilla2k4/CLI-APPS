@@ -12,21 +12,33 @@ console.log('\u001b[33m A for add task : S for show all tasks : U for update tas
 
 const userChoice = question("I want to: ")
 
-switch(userChoice){
-    case 'A':
-        AddTask()
-        break;
-    case 'S':
-        ShowAllTasks()
-        break;
-    case 'U':
-        EditTask()
-        break;
-    default:
-        console.log("Wrong operation")
-}   
+// switch(userChoice){
+//     case 'A':
+//         AddTask()
+//        break;
+//     case 'S':
+//         ShowAllTasks()
+//         break;
+//     case 'U':
+//         EditTask()
+//         break;
+//     default:
+//         console.log("Wrong operation")
+// } 
+
+if(userChoice == 'A'){
+   AddTask()
+}
+else if(userChoice == 'S'){
+    ShowAllTasks()
+}
+else if(userChoice == 'U'){
+    EditTask()
 }
 
-TaskManager()
+}
+
+
+
 
 export default TaskManager

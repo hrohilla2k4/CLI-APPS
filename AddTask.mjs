@@ -2,7 +2,7 @@ import jFile from 'jsonfile';
 import { question } from 'readline-sync';
 
 
-const AddTask = () => {
+function AddTask() {
 
     const taskInfo = {
         taskTitle: question("Enter Task Title: "),
@@ -16,9 +16,11 @@ const AddTask = () => {
             jFile.writeFile(`./Logs_And_Files/Tasks.json`,[taskInfo],{spaces: 2}, (err)=>{
                 if(err){
                     console.log(err)
+                    
                 }    
                 else{
                     console.log("Empty file written")
+                    
                 }
             })
         } else {
@@ -30,13 +32,17 @@ const AddTask = () => {
                     }
                     else{
                         console.log("Task added")
+                        
                     }
                 })
             }    
         }
         }
+
+     
  
-    )}
-
-
+    )
+    
+}
+  
 export default AddTask;

@@ -20,7 +20,9 @@ function loginProcess () {
  
 }
 
-loginProcess();
+
+
+export default loginProcess
 
 
 
